@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HexCreation's portfolio showcasing expertise in web development, digital media marketing, graphic design, and video editing.">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        :root {
+            --main-bg-color: #000000;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            color: #b3892f;
+            background-color: #121212;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--main-bg-color), #444444);
+            color: #d09822;
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom: 5px solid #d4af37;
+        }
+
+        header h1 {
+            margin: 0;
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #d4af37;
+            margin-top: 10px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: var(--main-bg-color);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #e6b650;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #eac038;
+            transform: scale(1.1);
+        }
+
+        .profile-img {
+            display: flex;
+            justify-content: center;
+            margin: 40px 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .profile-img img {
+            max-width: 180px;
+            border-radius: 50%;
+            border: 5px solid #d4af37;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .profile-img img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .name {
+            text-align: center;
+            font-size: 2.8rem;
+            font-family: 'Playfair Display', serif;
+            font-weight: bold;
+            margin-top: 15px;
+            color: #d4af37;
+        }
+
+        section {
+            padding: 50px 20px;
+            max-width: 1100px;
+            margin: 30px auto;
+            background: #1e1e1e;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        section h2 {
+            font-family: 'Playfair Display', serif;
+            color: #d4af37;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill {
+            background: linear-gradient(135deg, #d4af37, #b39550);
+            color: #000000;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+        }
+
+        .skill:hover {
+            transform: translateY(-10px);
+        }
+
+        .skill h3 {
+            margin: 0 0 10px;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+        }
+
+        .projects-placeholder {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .project-card {
+            background: linear-gradient(135deg, #d4b207, #e0b20e);
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+        }
+
+        footer {
+            background-color: var(--main-bg-color);
+            color: #e5c685;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            header p {
+                font-size: 1rem;
+            }
+
+            nav a {
+                margin: 0 10px;
+                font-size: 0.9rem;
+            }
+
+            section {
+                padding: 30px 15px;
+            }
+
+            .skills {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .projects-placeholder {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .profile-img img {
+                max-width: 140px;
+            }
+
+            .name {
+                font-size: 2rem;
+            }
+
+            nav {
+                flex-wrap: wrap;
+            }
+
+            nav a {
+                margin: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome To My Portfolio</h1>
+        <p>Crafting Excellence With Creativity And Innovation</p>
+    </header>
+
+    <div class="profile-img">
+        <img src="port.jpeg" alt="Profile Picture of Hex" loading="lazy" onerror="this.src='fallback.jpg';">
+    </div>
+
+    <div class="name">HexCreation's</div>
+
+    <nav aria-label="Main Navigation">
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm a Passionate Professional Experienced In Web Development, Digital Media Marketing, Graphic Designing, And Video Editing. I love Creating Projects That Blend Technical Skills With Creative Ideas.</p>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skills">
+            <div class="skill">
+                <h3>Web Development</h3>
+                <p>Building Responsive And Dynamic Websites Using The Latest Technologies.</p>
+            </div>
+            <div class="skill">
+                <h3>Digital Media Marketing</h3>
+                <p>Crafting Strategies To Boost Online Presence And Engagement.</p>
+            </div>
+            <div class="skill">
+                <h3>Graphic Designing</h3>
+                <p>Designing Visually Appealing Graphics That Communicate Effectively.</p>
+            </div>
+            <div class="skill">
+                <h3>Video Editing</h3>
+                <p>Editing And Producing High-Quality Videos For Various Purposes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="projects-placeholder">
+            <div class="project-card">
+                <h3>Project</h3>
+                <p>Coming Soon...</p>
+            </div>
+            <div class="project-card">
+                <h3>Project</h3>
+                <p>Coming Soon...</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Feel Free To Reach Out To Discuss Projects, Collaborations, Or Inquiries.</p>
+        <p>Email: <a href="mailto:hex16229@gmail.com">hex16229@gmail.com</a></p>
+        <p>WhatsApp: <a href="https://wa.me/447354280897" target="_blank" rel="noopener noreferrer">+44 7354 280897</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 HexCreation's Portfolio. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
